@@ -1,0 +1,66 @@
+$dark-bg: #3c4653;
+$dark-text: RGB(205, 240, 246);
+$light-bg: rgb(224, 227, 232);
+$light-text: RGB(3, 89, 104);
+
+#navbar {
+  background-color: $dark-bg;
+  position: relative;
+  .shape {
+    position: absolute;
+    // background-color: #35507b;
+    opacity: 0.1;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    // color: #b965ff;
+    width: 1000px;
+    height: 500px;
+  }
+  h2 {
+    color: $dark-text;
+  }
+  .nav {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    a {
+      color: $dark-text;
+      line-height: 20px;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 6px 40px;
+      background-color: #475263;
+      font-family: "Poppins", sans-serif;
+      &:hover {
+        color: rgba(255, 255, 255, 0.845);
+      }
+    }
+
+    button.login-btn {
+      color: white;
+      line-height: 24px;
+      border: none;
+      font-size: 18px;
+      background-color: #475263;
+      font-family: "Poppins", sans-serif;
+      padding: 6px 40px;
+      margin: 0;
+      background: linear-gradient(to bottom right, #5391ff, #b965ff);
+
+      transition: all 0.5s ease-out;
+      &:hover {
+        background: linear-gradient(to bottom right, #b965ff, #5391ff);
+      }
+    }
+    .active {
+      background-color: #1b7d92;
+    }
+  }
+}
