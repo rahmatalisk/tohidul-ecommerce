@@ -3,25 +3,12 @@ $dark-text: RGB(205, 240, 246);
 $light-bg: rgb(224, 227, 232);
 $light-text: RGB(3, 89, 104);
 
-header {
-  .shape {
-    position: absolute;
-    background-color: #b965ff;
-    opacity: 1;
-    top: 0;
-    z-index: 10;
-    right: 0;
-    // color: #b965ff;
-    width: 250px;
-    height: 250px;
-    filter: blur(100px);
-  }
-}
 #navbar {
   background-color: $dark-bg;
   position: relative;
-  z-index: 1000;
-  box-shadow: 0 0px 10px -2px rgb(40, 39, 39);
+  z-index: 10000;
+  box-shadow: 0 0px 15px -2px rgb(40, 39, 39);
+  box-shadow: 0 0px 15px -2px rgba(1, 3, 26, 0.582);
   h2 {
     color: $dark-text;
   }
@@ -30,6 +17,37 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media all and (max-width: 575px) {
+      padding: 15px 0;
+    }
+  }
+  .menu-bar-sm {
+    display: none;
+    @media all and (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  .menu-btn {
+    color: white;
+    line-height: 24px;
+    border: none;
+    font-size: 18px;
+    background-color: #475263;
+    font-family: "Poppins", sans-serif;
+    padding: 6px 40px;
+    margin: 0;
+    background-color: #282b30;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+
+    @media all and (max-width: 575px) {
+      padding: 5px 25px;
+      font-size: 17px;
+    }
+    &:hover {
+      background: linear-gradient(to bottom right, #b965ff, #5391ff);
+    }
   }
 
   .logo {
@@ -53,12 +71,18 @@ header {
         font-size: 16px;
         text-decoration: none;
         padding: 6px 40px;
-        background-color: #475263;
+        background-color: #75849a;
+        background-color: #595b66;
         font-family: "Poppins", sans-serif;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
         &:hover {
           color: rgba(255, 255, 255, 0.845);
+          background-color: #75849a;
         }
+      }
+      .active {
+        background-color: #1b7d92;
       }
     }
 
@@ -72,14 +96,15 @@ header {
       padding: 6px 40px;
       margin: 0;
       background: linear-gradient(to bottom right, #5391ff, #b965ff);
-
-      transition: all 0.5s ease-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 3px;
+      @media all and (max-width: 575px) {
+        padding: 5px 25px;
+        font-size: 17px;
+      }
       &:hover {
         background: linear-gradient(to bottom right, #b965ff, #5391ff);
       }
-    }
-    .active {
-      background-color: #1b7d92;
     }
   }
 }

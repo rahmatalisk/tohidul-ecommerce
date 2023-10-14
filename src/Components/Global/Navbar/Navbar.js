@@ -27,12 +27,13 @@ const Header = () => {
     },
   ];
   return (
-    <header>
-      <div className="shape"></div>
+    <header className="sticky-top">
       <div id="navbar">
-        
         <div className="container">
           <div className="nav">
+            <div className="menu-bar-sm">
+            <button className="menu-btn">Menu</button>
+            </div>
             <div className="logo">
               <h2>Logo</h2>
             </div>
