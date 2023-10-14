@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navItems = [
@@ -24,23 +25,29 @@ const Header = () => {
       href: "/",
       active: false,
     },
-    
   ];
   return (
     <header>
+      <div className="shape"></div>
       <div id="navbar">
-        <div className="shape"></div>
+        
         <div className="container">
           <div className="nav">
             <div className="logo">
               <h2>Logo</h2>
             </div>
             <div className="nav-item">
-              {navItems.map((it, i) => (
-                <a className={`${it?.active && "active"}`} key={i} href="/">
-                 {it?.name}
-                </a>
-              ))}
+              <div className="nav-links">
+                {navItems.map((item, i) => (
+                  <Link
+                    className={item.active ? "active" : ""}
+                    key={i}
+                    to={item.href}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
 
               <button className="login-btn">Login</button>
             </div>

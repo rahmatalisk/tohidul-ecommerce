@@ -3,20 +3,25 @@ $dark-text: RGB(205, 240, 246);
 $light-bg: rgb(224, 227, 232);
 $light-text: RGB(3, 89, 104);
 
+header {
+  .shape {
+    position: absolute;
+    background-color: #b965ff;
+    opacity: 1;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    // color: #b965ff;
+    width: 250px;
+    height: 250px;
+    filter: blur(100px);
+  }
+}
 #navbar {
   background-color: $dark-bg;
   position: relative;
-  .shape {
-    position: absolute;
-    // background-color: #35507b;
-    opacity: 0.1;
-    top: 0;
-    z-index: 10;
-    left: 0;
-    // color: #b965ff;
-    width: 1000px;
-    height: 500px;
-  }
+  z-index: 1000;
+  box-shadow: 0 0px 10px -2px rgb(40, 39, 39);
   h2 {
     color: $dark-text;
   }
@@ -26,20 +31,34 @@ $light-text: RGB(3, 89, 104);
     align-items: center;
     justify-content: space-between;
   }
+
+  .logo {
+    z-index: 100;
+    cursor: pointer;
+  }
   .nav-item {
     display: flex;
     align-items: center;
     gap: 0 20px;
-    a {
-      color: $dark-text;
-      line-height: 20px;
-      font-size: 16px;
-      text-decoration: none;
-      padding: 6px 40px;
-      background-color: #475263;
-      font-family: "Poppins", sans-serif;
-      &:hover {
-        color: rgba(255, 255, 255, 0.845);
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0 20px;
+      @media all and (max-width: 1024px) {
+        display: none;
+      }
+      a {
+        color: $dark-text;
+        line-height: 20px;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 6px 40px;
+        background-color: #475263;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        &:hover {
+          color: rgba(255, 255, 255, 0.845);
+        }
       }
     }
 
