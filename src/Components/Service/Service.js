@@ -1,5 +1,6 @@
 import React from "react";
 import "./Service.scss";
+import ServiceCard from "./ServiceCard";
 
 const Service = () => {
   const services = [
@@ -44,7 +45,9 @@ const Service = () => {
           <div className="box-container">
             {services.map((it, i) => (
               <div key={i} className="box">
-                <div className="box-content"></div>
+                <div className="box-content">
+                    <ServiceCard/>
+                </div>
               </div>
             ))}
           </div>
