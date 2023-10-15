@@ -84,6 +84,7 @@ $light-text: RGB(3, 89, 104);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         &:hover {
+          transform: scale(1.1);
           color: rgba(255, 255, 255, 0.845);
           background-color: #75849a;
         }
@@ -110,6 +111,7 @@ $light-text: RGB(3, 89, 104);
         font-size: 17px;
       }
       &:hover {
+        transform: scale(1.1);
         background: linear-gradient(to bottom right, #b965ff, #5391ff);
       }
     }
