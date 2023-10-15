@@ -5,6 +5,9 @@ import ServiceCard from "./ServiceCard";
 const Service = () => {
   const services = [
     {
+      name: "hasgdjshf" ,
+    },
+    {
       name: 1,
     },
     {
