@@ -8,7 +8,6 @@ const Slider = () => {
         <div className="box-wrapper">
           <div className="slider-box"></div>
         </div>
-        
       </div>
     </section>
   );
