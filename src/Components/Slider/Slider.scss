@@ -10,14 +10,21 @@
     font-family: "Poppins", sans-serif;
   }
   .box-wrapper {
-    background-color: #3c4653;
+    
     position: relative;
     width: 100%;
     z-index: 1;
-    padding: 15px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 0 10px #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.765);
+    
+    .slider-box {
+      margin: 0 auto;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 10px #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.765);
+      background-color: #3c4653;
+      max-width: 800px;
+      height: 100%;
+      padding: 15px;
+   
     transition: all 0.3s ease-in-out;
     &:hover {
       transform: scale(1.02);
@@ -26,16 +33,12 @@
     @media all and (max-width: 575px) {
       padding: 10px;
     }
-    .slider-box {
-      background-color: #0e0e0e;
-      width: 100%;
-      height: 100%;
     }
   }
 
   .carousel-item {
     width: 100%;
-    height: 500px;
+    height: 300px;
     @media all and (max-width: 575px) {
       height: 200px;
     }
